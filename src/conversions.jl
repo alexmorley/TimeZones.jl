@@ -6,7 +6,6 @@ import Base.Dates: now, unix2datetime
 Returns an equivalent `DateTime` without any `TimeZone` information.
 """
 DateTime(zdt::ZonedDateTime) = localtime(zdt)
-@vectorize_1arg ZonedDateTime DateTime
 
 """
     now(::TimeZone) -> ZonedDateTime
